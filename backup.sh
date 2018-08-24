@@ -1,17 +1,17 @@
 #!/bin/bash
 
-#Funciont: Backup website and mysql database
+#Function: Backup website and mysql database
 #Author: Jason
 
 ######~Set wwwroot and backup directory ~######
 Httpdocs_path='/home/wwwroot'
 Backup_tmp='/home/backup/tmp'
 Backup_path='/home/backup'
-Server_name='zz1'
+Server_name='us1'
 
 ######~Set MySQL UserName, password, bin directory and database names ~######
-MYSQL_UserName='vlf35'
-MYSQL_PassWord='gtcuzgi9'
+MYSQL_UserName='root'
+MYSQL_PassWord='YOUR_MYSQL_ROOT_PASS_HERE'
 MYSQL_path='/usr/local/mysql/bin'
 
 #Values Setting END!
