@@ -14,11 +14,14 @@ MYSQL_UserName='root'
 MYSQL_PassWord='YOUR_MYSQL_ROOT_PASS_HERE'
 MYSQL_path='/usr/local/mysql/bin'
 
+######~Set old backup delete interval, unit: day ~######
+Delete_interval='21'
+
 #Values Setting END!
 
 
-OldHttpdocsBackup=$Server_name-httpdocs-$(date -d -21day +"%Y%m%d").tar.gz
-OldDBBackup=$Server_name-db-$(date -d -21day +"%Y%m%d").tar.gz
+OldHttpdocsBackup=$Server_name-httpdocs-$(date -d -$Delete_intervalday +"%Y%m%d").tar.gz
+OldDBBackup=$Server_name-db-$(date -d -Delete_intervalday +"%Y%m%d").tar.gz
 
 tar -cvzPf $Backup_path/$Server_name-httpdocs-$(date +"%Y%m%d").tar.gz $Httpdocs_path/
 
